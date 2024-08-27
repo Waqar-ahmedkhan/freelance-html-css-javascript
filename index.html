@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- font-awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap select picker -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light container-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/adi-logo1.png" alt="Logo">
+            </a>
+            
+            <button class="navbar-toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item custom-nav-item">
+                        <a class="nav-link custom-nav-link mx-4 d-flex align-items-center" href="#" id="customCategoriesDropdown" role="button">
+                            Categories <i class="fa-solid fa-chevron-down reports-chevron"></i>
+                        </a>
+                        <div class="custom-dropdown-menu mt-2 container-lg" id="customDropdownMenu">
+                            <div class="custom-dropdown-content">
+                                <div class="custom-dropdown-sections row mx-2">
+                                    <div class="custom-dropdown-section col-lg-6 col-md-6 col-sm-6">
+                                        <h3 style="color: #000;">Departments</h3>
+                                        <ul class="custom-dropdown-list">
+                                            <li><a class="custom-dropdown-item" href="#"
+                                                    data-category="Clothing & Accessories">Clothing & Accessories</a>
+                                            </li>
+                                            <li><a class="custom-dropdown-item" href="#">Electronics</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Automotive</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Appliances</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Sports & Outdoors</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Beauty and Personal Care</a>
+                                            </li>
+                                            <li><a class="custom-dropdown-item" href="#">Toys & Games</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Grocery & Goumet Food</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Health & Wellness</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Books & Media</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Office Supplies</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Jewelry and Watches</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Garden & Outdoor</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="custom-dropdown-section col-lg-6 col-md-6 col-sm-6">
+                                        <h3 style="color: #000;">Services</h3>
+                                        <ul class="custom-dropdown-list">
+                                            <li><a class="custom-dropdown-item" href="#">Digital Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Financial Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Healthcare Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Education Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Legal Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Personal Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Buisness Services</a></li>
+                                            <li><a class="custom-dropdown-item" href="#">Travel and Hospitality
+                                                    Services</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="custom-dropdown-section custom-subcategories" id="customSubcategories">
+                                    <h6 id="customSelectedCategory"></h6>
+                                    <ul id="customSubcategoryList" class="custom-dropdown-list">
+                                    </ul>
+                                </div>
+                                <div class="custom-dropdown-cards">
+                                    <div class="categories-card custom-green-card">
+                                        <div class="custom-card-icon mb-2 custom-green-icon"><i
+                                                class="fa-solid fa-bowl-food"></i></div>
+                                        <div class="custom-card-content">
+                                            <strong>ADI FOOD</strong>
+                                            <p>Discover the best food and dining options.</p>
+                                            <a href="#" class="custom-card-explore explore-green">Explore <span
+                                                    class="custom-card-icon explore-icon"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square custom-green-icon"
+                                                        style="font-size: 0.7rem;"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="categories-card custom-red-card">
+                                        <div class="custom-card-icon mb-2 custom-red-icon"><i
+                                                class="fa-solid fa-car"></i></div>
+                                        <div class="custom-card-content">
+                                            <strong>ADI FREIGHT</strong>
+                                            <p>Find reliable transportation and freight services.</p>
+                                            <a href="#" class="custom-card-explore explore-red">Explore <span
+                                                    class="custom-card-icon explore-icon"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square custom-red-icon"
+                                                        style="font-size: 0.7rem;"></i></span></a>
+                                        </div>
+                                    </div>
+                                    <div class="categories-card custom-blue-card">
+                                        <div class="custom-card-icon mb-2 custom-blue-icon"><i
+                                                class="fa-solid fa-hotel"></i></div>
+                                        <div class="custom-card-content">
+                                            <strong>ADI INNS</strong>
+                                            <p>Book comfortable accommodations for your travels.</p>
+                                            <a href="#" class="custom-card-explore explore-blue">Explore <span
+                                                    class="custom-card-icon explore-icon"><i
+                                                        class="fa-solid fa-arrow-up-right-from-square custom-blue-icon"
+                                                        style="font-size: 0.7rem;"></i></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item d-flex align-items-center flex-grow-1">
+                        <div class="input-group me-2 flex-grow-1 position-relative border-input">
+                            <span class="input-group-text no-border px-2"><i class="fas fa-search"></i></span>
+                            <input type="text" class="form-control search-input px-2 no-border" id="searchInput"
+                                placeholder="What are you looking for">
+                            <button type="button" class="btn-clear d-none"><i class="fas fa-times"></i></button>
+                            <div class="custom-search-dropdown-menu mt-3 rounded container-lg" id="searchDropdownMenu">
+                                <div class="custom-search-dropdown-content d-flex">
+                                    <div class="custom-search-dropdown-section">
+                                        <div class="scrollable-content">
+                                            <ul class="custom-dropdown-list">
+                                                <li class="custom-dropdown-item d-flex search-card px-3 pt-3">
+                                                    <i class="fas fa-history recent-icon mt-2"></i>
+                                                    <div class="recent-search-text">
+                                                        <p class="search-text">Graphic designer</p>
+                                                        <span>Khlong Toei Nuea, Watthana, Bangkok, Thailand</span>
+                                                    </div>
+                                                    <div class="action-icons">
+                                                        <button class="btn-save">
+                                                            <i class="fa-regular fa-bookmark"></i>
+                                                            <i class="fa-solid fa-bookmark d-none"></i>
+                                                        </button>
+                                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                                    </div>
+                                                </li>
+                                                <li class="custom-dropdown-item d-flex search-card px-3 pt-3">
+                                                    <i class="fa-solid fa-magnifying-glass recent-icon mt-2"></i>
+                                                    <div class="recent-search-text">
+                                                        <p class="search-text">Graphic designer</p>
+                                                        <span>Khlong Toei Nuea, Watthana, Bangkok, Thailand</span>
+                                                    </div>
+                                                    <div class="action-icons">
+                                                        <button class="btn-save">
+                                                            <i class="fa-regular fa-bookmark"></i>
+                                                            <i class="fa-solid fa-bookmark d-none"></i>
+                                                        </button>
+                                                        <button class="btn-remove"><i class="fas fa-times"></i></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="search-footer">
+                                                <hr class="footer-divider">
+                                                <div
+                                                    class="recent-search-footer d-flex justify-content-between align-items-center mt-2 pt-2 px-3">
+                                                    <i class="fas fa-cog" id="settings-icon"></i>
+                                                    <a href="#" class="saved-searches">Saved Searches ></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-dropdown-cards ms-3">
+                                        <div class="categories-card custom-green-card">
+                                            <div class="custom-card-icon mb-2 custom-green-icon"><i
+                                                    class="fa-solid fa-bowl-food"></i></div>
+                                            <div class="custom-card-content">
+                                                <strong>ADI FOOD</strong>
+                                                <p>Discover the best food and dining options.</p>
+                                                <a href="#" class="custom-card-explore explore-green">Explore <span
+                                                        class="custom-card-icon explore-icon"><i
+                                                            class="fa-solid fa-arrow-up-right-from-square custom-green-icon"
+                                                            style="font-size: 0.7rem;"></i></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="categories-card custom-red-card">
+                                            <div class="custom-card-icon mb-2 custom-red-icon"><i
+                                                    class="fa-solid fa-car"></i></div>
+                                            <div class="custom-card-content">
+                                                <strong>ADI FREIGHT</strong>
+                                                <p>Find reliable transportation and freight services.</p>
+                                                <a href="#" class="custom-card-explore explore-red">Explore <span
+                                                        class="custom-card-icon explore-icon"><i
+                                                            class="fa-solid fa-arrow-up-right-from-square custom-red-icon"
+                                                            style="font-size: 0.7rem;"></i></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="categories-card custom-blue-card">
+                                            <div class="custom-card-icon mb-2 custom-blue-icon"><i
+                                                    class="fa-solid fa-hotel"></i></div>
+                                            <div class="custom-card-content">
+                                                <strong>ADI INNS</strong>
+                                                <p>Book comfortable accommodations for your travels.</p>
+                                                <a href="#" class="custom-card-explore explore-blue">Explore <span
+                                                        class="custom-card-icon explore-icon"><i
+                                                            class="fa-solid fa-arrow-up-right-from-square custom-blue-icon"
+                                                            style="font-size: 0.7rem;"></i></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group me-2 flex-grow-1 position-relative border-input">
+                            <span class="input-group-text no-border px-2"><i class="fas fa-map-marker-alt"></i></span>
+                            <input type="text" class="form-control location-input px-2 no-border" id="locationInput"
+                                placeholder="Where do you need it">
+                            <button type="button" class="btn-clear d-none"><i class="fas fa-times"></i></button>
+                            <div class="location-dropdown-menu mt-3 rounded conntainer-lg" id="locationDropdownMenu">
+                                <div class="location-dropdown-content">
+                                    <ul class="location-dropdown-list">
+                                        <li class="location-dropdown-item px-4">
+                                            <i class="fas fa-map-marker-alt recent-icon mt-2"></i>
+                                            <div class="recent-search-text">
+                                                <p class="search-text">123/45 Sukhumvit Road, Khlong Toei Nuea,
+                                                    Watthana, Bangkok, Thailand</p>
+                                                <span>~Your Location</span>
+                                            </div>
+                                        </li>
+                                        <li class="location-dropdown-item px-4">
+                                            <i class="fas fa-map-marker-alt recent-icon mt-2"></i>
+                                            <div class="recent-search-text">
+                                                <p class="search-text">456 Elm St</p>
+                                                <span>Downtown, City, Country</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <button class="btn search-icon-button"><i class="fas fa-search"></i></button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex align-items-center" href="#" id="reportsDropdown" role="button">
+                            Reports <i class="fa-solid fa-chevron-down reports-chevron"></i>
+                        </a>
+                        <ul class="dropdown-menu reports-dropdown-menu mt-3" aria-labelledby="reportsDropdown">
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                            <li><a class="dropdown-item" href="#">Credit History</a></li>
+                            <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                            <li><a class="dropdown-item" href="#">Scale History</a></li>
+                        </ul>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="languageCurrencyDropdown" role="button">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <div class="dropdown-menu language-currency-dropdown-menu mt-3"
+                            aria-labelledby="languageCurrencyDropdown">
+                            <div
+                                class="dropdown-header d-flex justify-content-between align-items-center language-header">
+                                <span class="language-text">Language & Currency</span>
+                                <button type="button" class="btn-close" aria-label="Close">&times;</button>
+                            </div>
+                            <hr>
+                            <div class="dropdown-section">
+                                <p class="change-text  px-2">Change Language
+                                <p>
+                                <div class="language-item d-flex align-items-center justify-content-between px-2">
+                                    <div class="languages">
+                                        <img src="/images/english.png" class="flag-icon rounded-circle" alt="Flag">
+                                        <span class="language-name ms-2">English</span>
+                                    </div>
+                                    <span class="tick-icon me-2"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="language-item d-flex align-items-center justify-content-between px-2">
+                                    <div class="languages">
+                                        <img src="/images/urdu.png" class="flag-icon rounded-circle" alt="Flag">
+                                        <span class="language-name ms-2">Urdu</span>
+                                    </div>
+                                    <span class="tick-icon me-2"><i class="fas fa-check"></i></span>
+                                </div>
+                            </div>
+                            <div class="dropdown-section mt-3">
+                                <p class="change-text px-2">Change Currency
+                                <p>
+                                <div class="currency-item d-flex justify-content-between align-items-center px-2">
+                                    <span>$ - USD - USDollar</span>
+                                    <a href="#"
+                                        class="change-currency-link text-decoration-none text-primary">Change</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="wishlistDropdown" role="button">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <div class="dropdown-menu wishlist-dropdown-menu" aria-labelledby="wishlistDropdown">
+                            <div class="wishlist-dropdown-header">
+                                <span>Wishlist</span>
+                                <button type="button" class="btn-close" aria-label="Close">&times;</button>
+                            </div>
+                            <div class="wishlist-dropdown-content">
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="wishlist-item">
+                                    <img src="/images/12.jpg" alt="Product Image">
+                                    <div class="item-details">
+                                        <div class="item-name">EcoSpark LED Bulbs</div>
+                                        <div class="item-brand">GreenTech Innovations</div>
+                                        <div class="item-rating">
+                                            4.5 <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                            </div>
+                            <div class="wishlist-dropdown-footer"></div>
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" id="notificationsDropdown" href="#" data-toggle="tooltip"
+                            data-placement="bottom" title="Tooltip on bottom"><i
+                                class="fa-regular fa-bell position-relative"><span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span></i></a>
+                        <div class="dropdown-menu notifications-dropdown-menu" aria-labelledby="notificationsDropdown">
+                            <div class="notifications-dropdown-header">
+                                <span class="notification-text">Notifications (1)</span>
+                                <div class="right-notification">
+                                    <a href="#" class="settings-link"><i class="fas fa-cog"></i></a>
+                                    <button type="button" class="btn-close" aria-label="Close">&times;</button>
+                                </div>
+                            </div>
+                            <div class="notifications-dropdown-content">
+                                <div class="notification-item px-3">
+                                    <img src="/images/image2.jpg" alt="Profile Image">
+                                    <div class="item-details">
+                                        <div class="item-name">U-Mart <span class="item-username">@umart_store</span>
+                                        </div>
+                                        <div class="item-message">Thank you for reaching out. We received your query and
+                                            are currently...</div>
+                                        <div class="item-time">20 min ago</div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="notification-item px-3">
+                                    <div class="profile-placeholder">A</div>
+                                    <div class="item-details">
+                                        <div class="item-name">Alex <span class="item-username">@alex</span></div>
+                                        <div class="item-message">Thank you for your feedback! We value your input
+                                            and...</div>
+                                        <div class="item-time">30 min ago</div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+                                <div class="notification-item px-3">
+                                    <div class="notification-icon"><i class="fa-regular fa-bell"></i></div>
+                                    <div class="item-details">
+                                        <div class="item-message"> <span class="fw-bold">Thank you </span> for reaching
+                                            out. We received your query and are currently...</div>
+                                        <div class="item-time">1 hour ago</div>
+                                    </div>
+                                    <button class="btn-close" aria-label="Remove">&times;</button>
+                                </div>
+
+                                <div class="notifications-dropdown-footer d-flex justify-content-center"><a href="">Show
+                                        All</a></div>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="inboxDropdown"><i class="fas fa-inbox position-relative"><span
+                                    class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span></i></a>
+                        <div class="dropdown-menu inbox-dropdown-menu" aria-labelledby="inboxDropdown">
+                            <div class="inbox-dropdown-header">
+                                <span class="inbox-text">Messages (1)</span>
+                                <div class="right-inbox">
+                                    <a href="#" class="settings-link"><i class="fas fa-cog"></i></a>
+                                    <button type="button" class="btn-close" aria-label="Close">&times;</button>
+                                </div>
+                            </div>
+                            <div class="inbox-dropdown-content">
+                                <div class="notification-item px-3">
+                                    <img src="/images/image2.jpg" alt="Profile Image">
+                                    <div class="item-details">
+                                        <div class="item-name">U-Mart <span class="item-username">@umart_store</span>
+                                        </div>
+                                        <div class="item-message">Thank you for reaching out. We received your query and
+                                            are currently...</div>
+                                        <div class="item-time">20 min ago</div>
+                                    </div>
+                                </div>
+                                <div class="notification-item px-3">
+                                    <div class="ib-profile-placeholder">A</div>
+                                    <div class="item-details">
+                                        <div class="item-name">Alex <span class="item-username">@alex</span></div>
+                                        <div class="item-message d-flex justify-content-between">
+                                            <div class="msg">
+                                                <i class="fas fa-video missed-icon"></i> Missed video call
+                                            </div>
+                                            <div class="missed-count">9+</div>
+                                        </div>
+                                        <div class="item-time">30 min ago</div>
+                                    </div>
+                                </div>
+                                <div class="notification-item px-3">
+                                    <img src="/images/image2.jpg" alt="Profile Image">
+                                    <div class="item-details">
+                                        <div class="item-name">U-Mart <span class="item-username">@umart_store</span>
+                                        </div>
+                                        <div class="item-message">
+                                            <i class="fas fa-phone missed-icon"></i> Missed voice call
+                                        </div>
+                                        <div class="item-time">20 min ago</div>
+                                    </div>
+                                </div>
+                                <div class="notification-item px-3">
+                                    <img src="/images/image2.jpg" alt="Profile Image">
+                                    <div class="item-details">
+                                        <div class="item-name">U-Mart <span class="item-username">@umart_store</span>
+                                        </div>
+                                        <div class="item-message">Thank you for reaching out. We received your query and
+                                            are currently...</div>
+                                        <div class="item-time">20 min ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inbox-dropdown-footer d-flex justify-content-center">
+                                <a href="#">Show All</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div id="cart-indicator">
+                            <button type="button"><span class="item-count">6</span></button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="account-icon">A</span>
+                        </a>
+                        <div class="account-dropdown mt-2" id="accountDropdown">
+                            <div class="account-dropdown-header">
+                                <div class="profile-placeholder">
+                                    <img src="/images/english.png" alt="Profile Picture" class="profile-picture mx-2" />
+                                    <span class="profile-initials">H</span>
+                                </div>
+                                <div class="profile-details">
+                                    <div class="profile-username">HandyPro Solutions</div>
+                                    <div class="profile-handle">@handypro_solutions</div>
+                                </div>
+                            </div>
+
+                            <div class="account-dropdown-content mx-2">
+                                <div class="account-item">My Profile</div>
+                                <div class="account-item">Profile Settings</div>
+                                <div class="account-item">Membership Details</div>
+                                <hr>
+                                <div class="account-item">Notifications</div>
+                                <div class="account-item">Messages</div>
+                                <hr>
+                                <div class="account-item">Wishlist</div>
+                                <div class="account-item">Saved Profiles</div>
+                                <div class="account-item">History</div>
+                                <hr>
+                                <div class="account-item">Free One-Page Websites</div>
+                                <div class="account-item">Manage Locations</div>
+                                <div class="account-item">Account Settings</div>
+                                <div class="account-item">Support</div>
+                                <div class="account-item">Logout</div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div id="sideBar">
+                <button type="button" class="btn-close ms-auto" aria-label="Close" onclick="closeNav()"><i class="fa-solid fa-x"></i></button>
+                <div class="sidebar-profile">
+                    <img src="/images/english.png" alt="Flag" class="sidebar-profile-img">
+                    <div class="sidebar-profile-info mx-3">
+                    <h4 class="sidebar-profile-heading">HandyPro Solutions</h4>
+                    <p>@handypro_solutions</p>
+                </div>
+                </div>
+            
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-list">
+                    <!-- Profile Settings Section -->
+                    <li>Profile Settings</li>
+                    <li>My Profile</li>
+                    <li>Membership Details</li>
+            
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <li>Notifications</li>
+                    <li>Messages</li>
+                    <hr class="sidebar-divider">
+                    <li>Wishlist</li>
+                    <li>Saved Profiles</li>
+                    <li>History</li>
+                    <hr class="sidebar-divider">
+                    <li>Orders</li>
+                    <li>Credit History</li>
+                    <li>Transaction History</li>
+                    <li>Sales History</li>
+                    <hr class="sidebar-divider">
+                    <li>Free One-Page Websites</li>
+                    <li>Manage Locations</li>
+                    <li>Account Settings</li>
+                    <li>Support</li>
+                    <!-- Logout Section -->
+                    <li class="sidebar-logout">Logout</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="bodyOverlay" class="body-overlay"></div>
+    <div class="container-lg">
+        <div class="row py-5 px-3 mobile-500">
+            <div class="search-bar-mobile d-block d-md-none">
+                <div class="input-group mb-3 search-bar" onclick="toggleCustomSection()">
+                    <span class="input-group-text" id="search-addon"><i class="fas fa-search"></i></span>
+                    <div class="form-control">
+                        <p class="search-title">handyman services</p>
+                        <p class="search-subtitle">Khlong Toei Nuea, Watthana, Bangkok, Thailand</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-full-screen-section" id="customFullScreenSection">
+                <div class="close-icon mobile-close-section" onclick="toggleCustomSection()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="mobile-section-container">
+                    <div class="mobile-section custom-departments" onclick="openDepartmentsSection()">
+                        <span class="mobile-first-section">Departments</span>
+                        <i class="fas fa-chevron-right top-sections-icon-right"></i>
+                    </div>
+                    <div id="departments-section" class="departments-section">
+                        <div class="header">
+                            <div class="back-button" onclick="goBack()">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                            <div class="close-icon" onclick="toggleCustomSection()">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <h2 class="mb-font-size">Departments</h2>
+                        <ul class="department-list">
+                            <li onclick="openSubSection('Clothing & Accessories')">Clothing & Accessories</li>
+                            <li onclick="openSubSection('Electronics')">Electronics</li>
+                            <li onclick="openSubSection('Home & Kitchen')">Home & Kitchen</li>
+                            <li onclick="openSubSection('Books')">Books</li>
+                            <li onclick="openSubSection('Sports')">Sports</li>
+                        </ul>
+                    </div>
+                    <!-- Departments sub-section -->
+                    <div id="subSection" class="departments-sub-section">
+                        <div class="top-bar">
+                            <div class="back-arrow" onclick="closeSubSection()">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                            <div class="close-icon" onclick="toggleCustomSection()">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="sub-section-heading my-4">
+                            <h3 class="section-title">Departments <i class="fa-solid fa-chevron-right section-right"></i> <span id="selectedDepartment" class="current-department"></span></h3>
+                        </div>
+                        <div class="sections-container mt-2">
+                            <div class="departments-things">
+                                <h3 class="my-3">Women's Clothing</h3>
+                                <ul>
+                                    <li>Tops & Blouses</li>
+                                    <li>Dresses</li>
+                                    <li>Jeans & Pants</li>
+                                    <li>Skirts</li>
+                                    <li>Outwear</li>
+                                    <li>Activewear</li>
+                                    <li>Sleepwear</li>
+                                    <li>Swimwear</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <h3 class="my-3">Kid's Clothing</h3>
+                                <ul>
+                                    <li>Baby Clothing</li>
+                                    <li>Boys' Clothing</li>
+                                    <li>Girls' Clothing</li>
+                                    <li>School Uniforms</li>
+                                    <li>Outwear</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <h3 class="my-3">Accessories</h3>
+                                <ul>
+                                    <li>Handbags</li>
+                                    <li>Wallets</li>
+                                    <li>Belts</li>
+                                    <li>Hats & Caps</li>
+                                    <li>Scarwes & Wraps</li>
+                                    <li>Gloves & Mittens</li>
+                                    <li>Socks & Hosiery</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <!-- Add more sections if needed -->
+                            </div>
+                            <div class="departments-things">
+                                <h3 class="my-3">Men's Clothing</h3>
+                                <ul>
+                                    <li>Shirts</li>
+                                    <li>Trousers & Jeans</li>
+                                    <li>Suits & Blazers</li>
+                                    <li>Jackets & Coats</li>
+                                    <li>Activewear</li>
+                                    <li>Sleepwear</li>
+                                    <li>Swimwear</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <h3 class="my-3">Jewelry</h3>
+                                <ul>
+                                    <li>Necklaces</li>
+                                    <li>Bracelets</li>
+                                    <li>Earrings</li>
+                                    <li>Rings</li>
+                                    <li>Watches</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <h3 class="my-3">Speciality Clothing</h3>
+                                <ul>
+                                    <li>Maternity Wear</li>
+                                    <li>Plus Size Clothing</li>
+                                    <li>Petite Clothing</li>
+                                    <li>Tall Clothing</li>
+                                    <!-- Add more items as needed -->
+                                </ul>
+                                <!-- Add more sections if needed -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-section custom-services">
+                        <span class="mobile-first-section">Services</span>
+                        <i class="fas fa-chevron-right top-sections-icon-right"></i>
+                    </div>
+                </div>
+                <div class="mobile-input-section" id="mobile-search-input">
+                    <span class="mobile-input-icon"><i class="fas fa-search"></i></span>
+                    <input type="text" placeholder="What are you looking for?" class="mobile-input-field mobile-first-section" />
+                </div>
+                <div class="mobile-input-section">
+                    <span class="mobile-input-icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" placeholder="Where do you need it?" class="mobile-input-field mobile-first-section" />
+                </div>
+                <button class="mobile-search-button mobile-first-section">Search</button>
+                <div class="mobile-search-card-section">
+                    <div class="mobile-search-card custom-green-border">
+                        <i class="fa-solid fa-bowl-food custom-green-icon mx-3"></i>
+                        <div class="mobile-search-card-content">
+                            <h3>ADI FOOD</h3>
+                            <p>Discover the best food and dining options.</p>
+                        </div>
+                        <span class="mobile-search-explore-link custom-green-link">Explore <i
+                            class="fa-solid fa-arrow-up-right-from-square mx-2"></i></span>
+                    </div>
+                    <div class="mobile-search-card custom-red-border">
+                        <i class="fa-solid fa-car custom-red-icon mx-3"></i>
+                        <div class="mobile-search-card-content">
+                            <h3>ADI FREIGHT</h3>
+                            <p>Find reliable transportation and freight services.</p>
+                        </div>
+                        <span class="mobile-search-explore-link custom-red-link">Explore <i
+                            class="fa-solid fa-arrow-up-right-from-square mx-2"></i></span>
+                    </div>
+                    <div class="mobile-search-card custom-blue-border">
+                        <i class="fa-solid fa-hotel custom-blue-icon mx-3"></i>
+                        <div class="mobile-search-card-content">
+                            <h3>ADI INNS</h3>
+                            <p>Book comfortable accommodations for your travels.</p>
+                        </div>
+                        <span class="mobile-search-explore-link custom-blue-link">Explore <i
+                            class="fa-solid fa-arrow-up-right-from-square mx-2"></i></span>
+                    </div>
+                </div>
+            </div>
+            <p class="result-heading">Results for <span class="fw-bold mx-2">Web Developer</span> in and around <span
+                    class="fw-bold mx-2">Khlong Toei Nuea,
+                    Watthana, Bangkok, Thailand</span></p>
+            <div class="col-12 col-lg-6 results-section mt-2">
+                <div class="d-flex justify-content-between mb-3">
+                    <p style="color: #000; margin-bottom: 0;" class="result-num-1">200 results</p>
+                    <div class="map-view-mobile">
+                        <button class="btn btn-outline-secondary border-bottom" id="mapViewBtn"><i
+                                class="fas fa-map-marker-alt"></i>
+                            Map View</button>
+                    </div>
+                    <p style="color: #000; margin-bottom: 0; display: none;" class="result-num">200 results</p>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary border-bottom" type="button" id="sortDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sort by <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                            <li><a class="dropdown-item" href="#">Distance (Nearest to Farthest)</a></li>
+                            <li><a class="dropdown-item" href="#">Distance (Farthest to Nearest)</a></li>
+                            <li><a class="dropdown-item" href="#">Ratings (Highest to Lowest)</a></li>
+                            <li><a class="dropdown-item" href="#">Ratings (Lowest to Highest)</a></li>
+                            <li><a class="dropdown-item" href="#">Most Popular</a></li>
+                            <li><a class="dropdown-item" href="#">Verified Profiles First</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="list-section">
+                    <div class="card mb-3 custom-card p-2">
+                        <div class="card-body position-relative custom-card-body">
+                            <img src="images/image2.jpg" alt="Profile" class="rounded-circle custom-profile-pic me-3">
+                            <div class="icon-container position-absolute top-0 end-0 d-flex">
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <img src="/images/website-icon.png" alt="website-icon" class="website-icon">
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn mt-2">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="card-title fw-bold mb-1 custom-card-title">HandyPro Solutions</h5>
+                                <p class="my-2 custom-location-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Khlong Toei Nuea, Watthana, Bangkok,
+                                        Thailand</span>
+                                </p>
+                                <p class="mb-1 custom-rating-distance">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                    <span class="mx-2">•</span>
+                                    <i class="fas fa-road"></i>
+                                    <span>14 km away</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer custom-card-footer">
+                            <p class="card-text custom-card-text">HandyPro Solutions provides top-notch
+                                handyman services for residential and commercial properties. Our skilled professionals
+                                are
+                                equipped to handle repairs, maintenance, and renovations, Lorem ipsum dolor sit
+                                amet.lorem3
+                            </p>
+                            <a href="#" class="btn btn-link text-decoration-none p-0 custom-view-details">View Details
+                                <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card mb-3 custom-card p-2">
+                        <div class="card-body position-relative custom-card-body">
+                            <img src="images/image2.jpg" alt="Profile" class="rounded-circle custom-profile-pic me-3">
+                            <div class="icon-container position-absolute top-0 end-0 d-flex">
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <img src="/images/website-icon.png" alt="website-icon" class="website-icon">
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn mt-2">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="card-title fw-bold mb-1 custom-card-title">HandyPro Solutions</h5>
+                                <p class="my-2 custom-location-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Khlong Toei Nuea, Watthana, Bangkok,
+                                        Thailand</span>
+                                </p>
+                                <p class="mb-1 custom-rating-distance">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                    <span class="mx-2">•</span>
+                                    <i class="fas fa-road"></i>
+                                    <span>14 km away</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer custom-card-footer">
+                            <p class="card-text custom-card-text">HandyPro Solutions provides top-notch
+                                handyman services for residential and commercial properties. Our skilled professionals
+                                are
+                                equipped to handle repairs, maintenance, and renovations, Lorem ipsum dolor sit
+                                amet.lorem3
+                            </p>
+                            <a href="#" class="btn btn-link text-decoration-none p-0 custom-view-details">View Details
+                                <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card mb-3 custom-card p-2">
+                        <div class="card-body position-relative custom-card-body">
+                            <img src="images/image2.jpg" alt="Profile" class="rounded-circle custom-profile-pic me-3">
+                            <div class="icon-container position-absolute top-0 end-0 d-flex">
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn me-2 mt-2">
+                                    <img src="/images/website-icon.png" alt="website-icon" class="website-icon">
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary custom-icon-btn mt-2">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h5 class="card-title fw-bold mb-1 custom-card-title">HandyPro Solutions</h5>
+                                <p class="my-2 custom-location-text">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Khlong Toei Nuea, Watthana, Bangkok,
+                                        Thailand</span>
+                                </p>
+                                <p class="mb-1 custom-rating-distance">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.5</span>
+                                    <span class="mx-2">•</span>
+                                    <i class="fas fa-road"></i>
+                                    <span>14 km away</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-footer custom-card-footer">
+                            <p class="card-text custom-card-text">HandyPro Solutions provides top-notch
+                                handyman services for residential and commercial properties. Our skilled professionals
+                                are
+                                equipped to handle repairs, maintenance, and renovations, Lorem ipsum dolor sit
+                                amet.lorem3
+                            </p>
+                            <a href="#" class="btn btn-link text-decoration-none p-0 custom-view-details">View Details
+                                <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="profile-section p-3 mb-3 bg-light rounded">
+                            <img src="images/profile-pic.jpg" alt="Profile" class="profile-pic-large me-3">
+                            <div>
+                                <h5 class="mb-0">HandyPro Solutions</h5>
+                                <p class="mb-0">@handy_pro</p>
+                            </div>
+                        </div>
+                        <div class="menu-section">
+                            <a href="#" class="menu-item">Profile Settings</a>
+                            <hr>
+                            <a href="#" class="menu-item">My Profile</a>
+                            <hr>
+                            <a href="#" class="menu-item">Membership Details</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="col-12 col-lg-6 map-section d-none d-md-block">
+                <div class="map-container" id="map"></div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar fixed-bottom navbar-light bottom-nav d-md-none" id="bottom-nav">
+        <div class="container-fluid d-flex justify-content-around">
+            <a href="#" class="bottom-nav-item"><i class="fa-solid fa-magnifying-glass mb-2"></i>
+                Explore</a>
+            <a href="#" class="bottom-nav-item"  id="wishlist-toggle"><i class="fa-regular fa-heart mb-2"></i> Wishlist</a>
+            <div id="wishlist-menu" class="wishlist-menu">
+                <div class="wishlist-menu-header">
+                    <span class="wishlist-heading">Wishlist</span>
+                    <i class="fa-solid fa-xmark close-menu" id="close-menu"></i>
+                </div>
+                <div class="wishlist-cards">
+                    <!-- Example Card -->
+                    <div class="wishlist-card">
+                        <img src="/images/image1.jpg" alt="QuickFix Home Repairs" class="wishlist-card-image">
+                        <div class="wishlist-card-info">
+                            <div class="wishlist-card-title">QuickFix Home Repairs</div>
+                            <div class="wishlist-card-subtitle">HandyPro Solutions</div>
+                            <div class="wishlist-card-rating">
+                                <span>4.5</span>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-xmark remove-card"></i>
+                    </div>
+                    <div class="wishlist-card">
+                        <img src="/images/image1.jpg" alt="QuickFix Home Repairs" class="wishlist-card-image">
+                        <div class="wishlist-card-info">
+                            <div class="wishlist-card-title">QuickFix Home Repairs</div>
+                            <div class="wishlist-card-subtitle">HandyPro Solutions</div>
+                            <div class="wishlist-card-rating">
+                                <span>4.5</span>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-xmark remove-card"></i>
+                    </div>
+                    <div class="wishlist-card">
+                        <img src="/images/image1.jpg" alt="QuickFix Home Repairs" class="wishlist-card-image">
+                        <div class="wishlist-card-info">
+                            <div class="wishlist-card-title">QuickFix Home Repairs</div>
+                            <div class="wishlist-card-subtitle">HandyPro Solutions</div>
+                            <div class="wishlist-card-rating">
+                                <span>4.5</span>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-xmark remove-card"></i>
+                    </div>
+                    <div class="wishlist-card">
+                        <img src="/images/image1.jpg" alt="QuickFix Home Repairs" class="wishlist-card-image">
+                        <div class="wishlist-card-info">
+                            <div class="wishlist-card-title">QuickFix Home Repairs</div>
+                            <div class="wishlist-card-subtitle">HandyPro Solutions</div>
+                            <div class="wishlist-card-rating">
+                                <span>4.5</span>
+                                <i class="fa-solid fa-star text-warning"></i>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-xmark remove-card"></i>
+                    </div>
+                    <!-- More Cards -->
+                </div>
+            </div>
+            <a href="#" class="bottom-nav-item"><i class="fa-solid fa-inbox mb-2"></i> Messages</a>
+            <a href="#" class="bottom-nav-item"><i class="fa-solid fa-cart-shopping mb-2"></i> Cart</a>
+            <a href="#" class="bottom-nav-item"><i class="fa-regular fa-user mb-2"></i>Profile</a>
+        </div>
+    </nav>
+
+    <script src="/js/custom.js"></script>
+    <!-- bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="js/countries.js"></script> -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Include Leaflet.js for map rendering -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+
+</html>
